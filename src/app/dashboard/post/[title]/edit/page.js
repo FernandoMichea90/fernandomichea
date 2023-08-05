@@ -12,9 +12,9 @@ export const metadata = {
 };
 
 export default function PostEditPage({ params }) {
-  const { title } = params;
+  const { title = 'default-title' } = params;
 
-  return <PostEditView title={params.title} />;
+  return <PostEditView title={title} />;
 }
 
 export async function generateStaticParams() {
