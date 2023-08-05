@@ -68,32 +68,32 @@
     "react/function-component-definition": 0,
     "jsx-a11y/control-has-associated-label": 0,
     "react/jsx-no-useless-fragment": [
-      1,
+      0,
       {
         "allowExpressions": true
       }
     ],
     "prefer-destructuring": [
-      1,
+      0,
       {
         "object": true,
         "array": false
       }
     ],
     "react/no-unstable-nested-components": [
-      1,
+      0,
       {
         "allowAsProps": true
       }
     ],
     "no-unused-vars": [
-      1,
+      0,
       {
         "args": "none"
       }
     ],
     "react/jsx-no-duplicate-props": [
-      1,
+      0,
       {
         "ignoreCase": false
       }
