@@ -17,17 +17,6 @@ export default function PostDetailsPage({ params }) {
   return <PostDetailsView title={title} />;
 }
 
-export async function generateStaticParams() {
-  try {
-    const res = await axios.get(endpoints.post.list);
-    return res.data.posts.map((post) => ({
-      title: paramCase(post.title),
-    }));
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    throw error; // Rethrow the error to be caught higher up the call stack
-  }
-}
 
 PostDetailsPage.propTypes = {
   params: PropTypes.shape({
