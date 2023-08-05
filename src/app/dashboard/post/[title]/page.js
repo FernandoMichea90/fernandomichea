@@ -18,11 +18,15 @@ export default function PostDetailsPage({ params }) {
 }
 
 export async function generateStaticParams() {
-  const res = await axios.get(endpoints.post.list);
-
-  return res.data.posts.map((post) => ({
-    title: paramCase(post.title),
-  }));
+  try {
+    const res = await axios.get(endpoints.post.list);
+    return res.data.posts.map((post) => ({
+      title: paramCase(post.title),
+    }));
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw error; // Rethrow the error to be caught higher up the call stack
+  }
 }
 
 PostDetailsPage.propTypes = {
